@@ -9,6 +9,7 @@ interface ContactModalProps {
   buttonVariant?: 'primary' | 'secondary' | 'outline';
   buttonSize?: 'sm' | 'md' | 'lg';
   buttonClassName?: string;
+  useSimplifiedForm?: boolean;
 }
 
 const ContactModal: React.FC<ContactModalProps> = ({
@@ -16,6 +17,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
   buttonVariant = 'primary',
   buttonSize = 'md',
   buttonClassName = '',
+  useSimplifiedForm = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -79,7 +81,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
               onClick={handleCloseModal}
             >
               <div 
-                className="bg-card/95 w-full max-w-2xl rounded-2xl shadow-2xl p-6 md:p-8 relative border border-border backdrop-blur-lg overflow-hidden"
+                className="bg-card/95 w-full max-w-2xl rounded-2xl shadow-2xl p-6 md:p-8 relative border border-border backdrop-blur-lg overflow-hidden mb-4"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Декоративные элементы */}
@@ -87,12 +89,13 @@ const ContactModal: React.FC<ContactModalProps> = ({
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 rounded-full filter blur-3xl"></div>
                 <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-accent/10 rounded-full filter blur-3xl"></div>
                 
+                {/* Кнопка закрытия */}
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     handleCloseModal();
                   }}
-                  className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors bg-background/50 hover:bg-background/80 backdrop-blur-sm rounded-full p-2 border border-border/50 hover:border-border z-50"
+                  className="fixed top-4 right-4 z-[60] w-12 h-12 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors bg-background/50 hover:bg-background/80 backdrop-blur-sm rounded-full p-2 border border-border/50 hover:border-border shadow-lg"
                   aria-label="Закрыть"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -110,7 +113,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                   <p className="text-center text-foreground/70 mb-6">
                     Заполните форму, и мы свяжемся с вами для обсуждения деталей
                   </p>
-                  <ContactForm onClose={handleCloseModal} />
+                  <ContactForm onClose={handleCloseModal} isSimplified={useSimplifiedForm} />
                 </div>
               </div>
             </motion.div>

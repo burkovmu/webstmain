@@ -88,7 +88,7 @@ const ArticleModal = ({ isOpen, onClose, article }: ArticleModalProps) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto pt-16 px-4 pb-6"
+            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto px-4 pb-6"
             onClick={onClose}
           >
             <div 

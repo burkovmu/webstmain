@@ -40,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto pt-16 px-4 pb-6"
+            className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto px-4 pb-6"
             onClick={onClose}
           >
             <div 
