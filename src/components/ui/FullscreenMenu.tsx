@@ -40,36 +40,29 @@ const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose }) => {
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[1000] flex items-center justify-center bg-background/95 backdrop-blur-md"
         >
-          <div className="absolute top-0 left-0 w-full">
-            <div className="w-full py-5 md:py-6">
-              <div className="container mx-auto px-4 md:px-6">
-                <div className="flex items-center justify-end">
-                  <button
-                    onClick={onClose}
-                    className="p-3 text-foreground/60 hover:text-foreground transition-colors duration-300 touch-manipulation"
-                    aria-label="Закрыть меню"
-                    style={{ touchAction: "manipulation" }}
-                  >
-                    <svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-10 h-10 md:w-8 md:h-8"
-                    >
-                      <path
-                        d="M18 6L6 18M6 6L18 18"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="fixed top-4 right-4 z-[1001]">
+            <button
+              onClick={onClose}
+              className="w-16 h-16 bg-background/50 text-foreground hover:text-accent transition-colors duration-300 rounded-full border border-border/60 backdrop-blur-sm flex items-center justify-center touch-manipulation"
+              aria-label="Закрыть меню"
+              style={{ touchAction: "manipulation" }}
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </div>
 
           <motion.nav

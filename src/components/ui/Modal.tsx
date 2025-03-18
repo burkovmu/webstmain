@@ -40,13 +40,25 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 md:p-8 overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto pt-16 px-4 pb-6"
             onClick={onClose}
           >
             <div 
-              className="bg-card rounded-lg shadow-lg w-full max-w-lg my-8 relative max-h-[90vh] overflow-y-auto"
+              className="bg-card rounded-lg shadow-lg w-full max-w-lg relative max-h-full overflow-y-auto mb-4"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Кнопка закрытия */}
+              <button
+                onClick={onClose}
+                className="fixed top-4 right-4 z-[60] w-12 h-12 flex items-center justify-center bg-background/70 backdrop-blur-sm rounded-full border border-border/50 text-foreground hover:text-accent transition-colors"
+                aria-label="Закрыть"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              
               {title && (
                 <div className="px-6 py-4 border-b border-border sticky top-0 bg-card z-10">
                   <h3 className="text-xl font-semibold">{title}</h3>

@@ -70,31 +70,31 @@ const ArticleModal = ({ isOpen, onClose, article }: ArticleModalProps) => {
             onClick={onClose}
           />
 
+          {/* Кнопка закрытия - вынесем отдельно вне скролла */}
+          <button
+            onClick={onClose}
+            className="fixed top-4 right-4 z-[60] w-14 h-14 rounded-full bg-background/70 backdrop-blur-sm flex items-center justify-center text-foreground hover:text-accent transition-colors duration-300 border border-border/50 shadow-lg"
+            aria-label="Закрыть"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
           {/* Модальное окно */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 md:p-12 overflow-y-auto"
+            className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto pt-16 px-4 pb-6"
             onClick={onClose}
           >
             <div 
-              className="bg-card/95 w-full max-w-4xl my-8 rounded-2xl shadow-xl border border-border relative backdrop-blur-lg max-h-[90vh] overflow-y-auto"
+              className="bg-card/95 w-full max-w-4xl mb-4 rounded-2xl shadow-xl border border-border relative backdrop-blur-lg max-h-full overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Кнопка закрытия */}
-              <button
-                onClick={onClose}
-                className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-background/50 backdrop-blur-sm flex items-center justify-center text-foreground/70 hover:text-accent transition-colors duration-300"
-                aria-label="Закрыть"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-
               {/* Изображение статьи */}
               <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-t-2xl">
                 <Image
