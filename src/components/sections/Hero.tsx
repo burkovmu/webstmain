@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ContactModal from '@/components/sections/ContactModal';
 import AnimatedBackground from '@/components/ui/AnimatedBackground';
 import ParallaxItem from '@/components/ui/ParallaxItem';
 import MagneticButton from '@/components/ui/MagneticButton';

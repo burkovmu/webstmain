@@ -75,7 +75,7 @@ const Footer = () => {
             </p>
             
             <div className="flex space-x-4">
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <motion.a
                   key={link.name}
                   href={link.url}
