@@ -89,24 +89,26 @@ const Hero = () => {
             className="max-w-5xl mx-auto text-center"
           >
             <motion.div variants={itemVariants} className="mb-6">
-              <span className="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+              <span className="inline-block py-1 px-3 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4 font-[Azbuka06]">
                 Премиальная веб-студия
               </span>
             </motion.div>
 
             <motion.h1 
-              className="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 leading-tight tracking-tight"
+              className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold font-display mb-10 leading-[1.0] tracking-tight font-[PobedaRegular]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Создаем <span className="text-gradient">цифровые</span> впечатления, которые <span className="text-gradient">запоминаются</span>
+              Создаем <span className="text-gradient">цифровые</span> <br className="hidden md:block" />
+              впечатления, <br className="hidden md:block" />
+              которые <span className="text-gradient">запоминаются</span>
             </motion.h1>
             
             <motion.p 
               ref={subtitleRef}
               variants={itemVariants}
-              className="text-lg md:text-xl font-light text-foreground/80 max-w-3xl mx-auto mb-10"
+              className="text-lg md:text-xl font-normal text-foreground/80 max-w-3xl mx-auto mb-10 font-[Azbuka06] tracking-wide"
             >
               Мы разрабатываем сложные профессиональные сайты с уникальным дизайном и анимацией, выделяющие ваш бренд среди конкурентов.
             </motion.p>
@@ -114,7 +116,7 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <MagneticButton 
                 strength={30} 
-                className="rounded-full bg-secondary/10 backdrop-blur-sm border border-secondary/20 text-foreground hover:bg-secondary/20 transition-colors duration-300 py-3 px-6"
+                className="rounded-full bg-secondary/10 backdrop-blur-sm border border-secondary/20 text-foreground hover:bg-secondary/20 transition-colors duration-300 py-3 px-6 font-[Azbuka06] tracking-wide"
               >
                 <a href="#projects" className="flex items-center gap-2">
                   <span>Смотреть проекты</span>

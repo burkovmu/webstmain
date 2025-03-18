@@ -80,7 +80,7 @@ const ArticleModal = ({ isOpen, onClose, article }: ArticleModalProps) => {
             onClick={onClose}
           >
             <div 
-              className="bg-card/95 w-full max-w-4xl my-8 rounded-2xl shadow-xl border border-border relative backdrop-blur-lg"
+              className="bg-card/95 w-full max-w-4xl my-8 rounded-2xl shadow-xl border border-border relative backdrop-blur-lg max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Кнопка закрытия */}
@@ -96,7 +96,7 @@ const ArticleModal = ({ isOpen, onClose, article }: ArticleModalProps) => {
               </button>
 
               {/* Изображение статьи */}
-              <div className="relative h-64 md:h-80 w-full">
+              <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-t-2xl">
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -126,16 +126,6 @@ const ArticleModal = ({ isOpen, onClose, article }: ArticleModalProps) => {
                     <div key={index} className="mb-8">
                       <h2 className="text-2xl font-bold font-display mb-4">{section.title}</h2>
                       <p className="mb-4 font-light">{section.content}</p>
-                      {section.image && (
-                        <div className="relative h-64 w-full my-6 rounded-xl overflow-hidden">
-                          <Image
-                            src={section.image}
-                            alt={section.title}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      )}
                     </div>
                   ))}
                   

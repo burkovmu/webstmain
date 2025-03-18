@@ -46,8 +46,9 @@ const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose }) => {
                 <div className="flex items-center justify-end">
                   <button
                     onClick={onClose}
-                    className="p-2 text-foreground/60 hover:text-foreground transition-colors duration-300"
+                    className="p-3 text-foreground/60 hover:text-foreground transition-colors duration-300 touch-manipulation"
                     aria-label="Закрыть меню"
+                    style={{ touchAction: "manipulation" }}
                   >
                     <svg
                       width="32"
@@ -55,12 +56,12 @@ const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose }) => {
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-8 h-8"
+                      className="w-10 h-10 md:w-8 md:h-8"
                     >
                       <path
                         d="M18 6L6 18M6 6L18 18"
                         stroke="currentColor"
-                        strokeWidth="2"
+                        strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />

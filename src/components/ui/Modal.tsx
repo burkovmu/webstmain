@@ -41,10 +41,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 md:p-8 overflow-y-auto"
+            onClick={onClose}
           >
-            <div className="bg-card rounded-lg shadow-lg w-full max-w-lg my-8 relative">
+            <div 
+              className="bg-card rounded-lg shadow-lg w-full max-w-lg my-8 relative max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
               {title && (
-                <div className="px-6 py-4 border-b border-border">
+                <div className="px-6 py-4 border-b border-border sticky top-0 bg-card z-10">
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </div>
               )}

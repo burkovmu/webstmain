@@ -68,7 +68,7 @@ export const articlesData: ArticleContent[] = [
     category: 'Маркетинг',
     date: '20 ноября 2023',
     readTime: '8 минут',
-    image: '/images/articles/seo.jpg',
+    image: '/images/articles/seo-basics.jpg',
     content: {
       intro: 'Поисковая оптимизация (SEO) — это комплекс мер по улучшению видимости сайта в поисковых системах. Хорошая SEO-стратегия может значительно увеличить органический трафик на ваш сайт, что приводит к большему количеству потенциальных клиентов и конверсий.',
       sections: [
@@ -100,7 +100,7 @@ export const articlesData: ArticleContent[] = [
     category: 'Управление проектами',
     date: '5 декабря 2023',
     readTime: '6 минут',
-    image: '/images/articles/brief.jpg',
+    image: '/images/articles/brief-importance.jpg',
     content: {
       intro: 'Техническое задание (ТЗ) — это документ, который определяет цели, функциональные требования и ограничения веб-проекта. Хорошо составленное ТЗ является основой успешной разработки, помогая избежать недопонимания между заказчиком и исполнителем.',
       sections: [
@@ -128,7 +128,7 @@ export const articlesData: ArticleContent[] = [
     category: 'Аналитика',
     date: '18 декабря 2023',
     readTime: '7 минут',
-    image: '/images/articles/metrics.jpg',
+    image: '/images/articles/traffic-metrics.jpg',
     content: {
       intro: 'Измерение эффективности веб-сайта — необходимый шаг для понимания его влияния на бизнес и выявления областей для улучшения. Правильно выбранные метрики помогают принимать обоснованные решения и оптимизировать инвестиции в веб-присутствие.',
       sections: [
@@ -160,7 +160,7 @@ export const articlesData: ArticleContent[] = [
     category: 'Разработка',
     date: '10 января 2024',
     readTime: '6 минут',
-    image: '/images/articles/mobile.jpg',
+    image: '/images/articles/responsive-design.jpg',
     content: {
       intro: 'С ростом мобильного трафика, оптимизация сайта для смартфонов и планшетов стала необходимостью. Мобильно-оптимизированный сайт не только улучшает пользовательский опыт, но и положительно влияет на SEO, так как Google использует мобильную версию сайта для индексации и ранжирования.',
       sections: [
@@ -192,7 +192,7 @@ export const articlesData: ArticleContent[] = [
     category: 'Разработка',
     date: '25 февраля 2024',
     readTime: '9 минут',
-    image: '/images/articles/cms.jpg',
+    image: '/images/articles/minimalism.jpg',
     content: {
       intro: 'Выбор правильного JavaScript-фреймворка может существенно повлиять на эффективность разработки и производительность конечного продукта. В этой статье мы рассмотрим наиболее популярные современные фреймворки, их особенности и критерии выбора для различных типов проектов.',
       sections: [
